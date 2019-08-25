@@ -50,11 +50,11 @@ object canelones{
 
 object canelones_alternativo{
 	var energia = 20
-	method ponerSalsa(){ energia +5 }
-	method sacarSalsa(){ energia - 5}
-	method ponerQueso(){energia + 7}
-	method sacarQueso(){energia - 7}
-	method energiaPorGramo(){}
+	method ponerSalsa(){ return energia + 5 }
+	method sacarSalsa(){ energia -= 5}
+	method ponerQueso(){ energia = energia + 7}
+	method sacarQueso(){ energia = energia - 7}
+	method energiaPorGramo(){return energia}
 }
 
 object canelones2{
@@ -67,9 +67,14 @@ object canelones2{
 	method energiaPorGramo(){
 		if (not tieneSalsa and not tieneQueso){
 			return 20
-		}else if
+		}else if (tieneSalsa and not tieneQueso){
+			return 25		
+		}else if (not tieneSalsa and tieneQueso){
+			return 27
+		}else {
+			return 32
+		}
 	}
-	
 }
 
 object mijo_alternativo{
