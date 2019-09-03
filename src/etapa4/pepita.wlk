@@ -48,7 +48,7 @@ object pepita {
 }
 
 
-object roque {
+object roqueViejo {
 	method entrenar() {
 		pepita.volar(10)
 		pepita.comer(alpiste, 300)
